@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Nile Language School",
   description: "Next.js School Management System",
+  icons: "/logo.png"
 };
 
 export default function RootLayout({
