@@ -99,7 +99,7 @@ const FinanceChart = () => {
       >
         <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />
         <XAxis dataKey="name" axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} tickMargin={10} />
-        <YAxis width="auto" axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} tickMargin={20} />
+        <YAxis axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} tickMargin={20} />
         <Tooltip />
         <Legend
             align="center"

@@ -41,7 +41,6 @@ const CountChart = () => {
             style={{ aspectRatio: 1.618 }}
             innerRadius="40%"
             outerRadius="100%"
-            responsive
             cx="50%"
             cy="50%"
             barSize={32}

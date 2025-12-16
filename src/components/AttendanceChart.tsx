@@ -52,7 +52,7 @@ const AttendanceChart = () => {
         <BarChart width={500} height={500} data={data} barSize={20} className="">
           <CartesianGrid strokeDasharray="3 3" className="" />
           <XAxis dataKey="name" axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} />
-          <YAxis width="auto" axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} />
+          <YAxis axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} />
           <Tooltip contentStyle={{ borderRadius: "10px", borderColor: "lightgray"}} />
           <Legend
             align="left"
