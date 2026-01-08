@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { RadialBar, RadialBarChart } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { RadialBar, RadialBarChart } from "recharts";
 
 import {
   Card,
@@ -10,27 +10,47 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/components/ui/chart"
+} from "@/components/ui/chart";
+import { classesData } from "@/lib/data";
 
-export const description = "A radial chart"
+export const description = "A radial chart";
 
 const chartData = [
-  { browser: "chrome", visitors: 400, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-]
+  {
+    name: "Total",
+    count: 102,
+    fill: "white",
+    className:"hidden",
+  },
+  {
+    name: "Girls",
+    count: 50,
+    fill: `#FAE27C`,
+  },
+  {
+    name: "Boys",
+    count: 52,
+    fill: "#C3EBFA",
+  },
+];
+
+const sadsad = [
+  { name: "chrome", count: 400, fill: "var(--color-chrome)" },
+  { name: "safari", count: 200, fill: "var(--color-safari)" },
+  { name: "firefox", count: 187, fill: "var(--color-firefox)" },
+  { name: "edge", count: 173, fill: "var(--color-edge)" },
+  { name: "other", count: 90, fill: "var(--color-other)" },
+];
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
+  count: {
+    label: "Count",
   },
   chrome: {
     label: "Chrome",
@@ -52,7 +72,7 @@ const chartConfig = {
     label: "Other",
     color: "var(--chart-5)",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function ChartRadialSimple() {
   return (
@@ -69,9 +89,9 @@ export function ChartRadialSimple() {
           <RadialBarChart data={chartData} innerRadius={30} outerRadius={110}>
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel nameKey="browser" />}
+              content={<ChartTooltipContent hideLabel nameKey="name" />}
             />
-            <RadialBar dataKey="visitors" background />
+            <RadialBar dataKey="count" background />
           </RadialBarChart>
         </ChartContainer>
       </CardContent>
@@ -80,9 +100,9 @@ export function ChartRadialSimple() {
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-muted-foreground leading-none">
-          Showing total visitors for the last 6 months
+          Showing total count for the last 6 months
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
