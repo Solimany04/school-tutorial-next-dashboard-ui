@@ -5,6 +5,7 @@ import AttendanceChart from '@/components/AttendanceChart'
 import FinanceChart from '@/components/FinanceChart'
 import EventCalendar from '@/components/EventCalendar'
 import Announements from '@/components/Announements'
+import ChartLineDots from '@/components/chart-line-dots'
 
 
 const AdminPage = () => {
@@ -34,6 +35,7 @@ const AdminPage = () => {
       {/* bottom charts */}
       <div className="w-full h-[500px]">
         <FinanceChart/>
+        <ChartLineDots/>
       </div>
       </div>
 
