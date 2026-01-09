@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Variables } from "@/app/variables"
+import { ModeToggle } from "./mode-toggler"
 
 const Navbar = () => {
   return (
@@ -11,6 +12,9 @@ const Navbar = () => {
         </div>
         {/* icons+user */}
         <div className="flex items-center gap-6 justify-end w-full">
+            <div>
+                <ModeToggle/>
+            </div>
             <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
                 <Image src="/message.png" alt="" width={20} height={20} />
             </div>

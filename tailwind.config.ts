@@ -14,12 +14,12 @@ const config: Config = {
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
   		},
   		colors: {
-  			AbduhSky: '#C3EBFA',
-  			AbduhSkyLight: '#EDF9FD',
-  			AbduhPurple: '#CFCEFF',
-  			AbduhPurpleLight: '#F1F0FF',
-  			AbduhYellow: '#FAE27C',
-  			AbduhYellowLight: '#FEFCE8',
+			AbduhSky: 'hsl(var(--abduh-sky))',
+  			AbduhSkyLight: 'hsl(var(--abduh-sky-light))',
+			AbduhPurple: 'hsl(var(--abduh-purple))',
+			AbduhPurpleLight: 'hsl(var(--abduh-purple-light))',
+			AbduhYellow: 'hsl(var(--abduh-yellow))',
+			AbduhYellowLight: 'hsl(var(--abduh-yellow-light))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

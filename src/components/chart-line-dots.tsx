@@ -1,7 +1,15 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+} from "recharts";
 import Image from "next/image";
 
 import {
@@ -94,9 +102,9 @@ const chartConfig = {
 
 export default function ChartLineDots() {
   return (
-    <Card>
-      <div className="bg-white rounded-xl w-full h-full p-4">
-        <div className=" flex justify-between items-center">
+    <Card className="border-none shadow-none">
+      <div className="rounded-xl w-full h-full p-4 ">
+        <div className=" flex justify-between items-center ">
           <h1 className="text-lg font-semibold">Finance</h1>
           <Image src="/moreDark.png" alt="" width={20} height={20} />
         </div>
@@ -104,20 +112,38 @@ export default function ChartLineDots() {
       <CardContent>
         <ChartContainer config={chartConfig}>
           <LineChart
+            width={500}
+            height={300}
             accessibilityLayer
             data={chartData}
             margin={{
-              left: 12,
-              right: 12,
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
             }}
           >
-            <CartesianGrid vertical={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />
             <XAxis
-              dataKey="month"
+              dataKey="name"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
+              tick={{ fill: "#d1d5db" }}
+              // tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <YAxis
+              axisLine={false}
+              tickLine={false}
+              tickMargin={20}
+              tick={{ fill: "#d1d5db" }}
+            />
+            <Tooltip />
+            <Legend
+              align="center"
+              verticalAlign="top"
+              wrapperStyle={{ paddingTop: "10px", paddingBottom: "30px" }}
+              className=""
             />
             <ChartTooltip
               cursor={true}

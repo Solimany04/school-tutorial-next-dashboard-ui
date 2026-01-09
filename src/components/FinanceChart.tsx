@@ -100,9 +100,9 @@ const FinanceChart = () => {
           <XAxis
             dataKey="name"
             axisLine={false}
-            tick={{ fill: "#d1d5db" }}
             tickLine={false}
             tickMargin={10}
+            tick={{ fill: "#d1d5db" }}
           />
           <YAxis
             axisLine={false}
